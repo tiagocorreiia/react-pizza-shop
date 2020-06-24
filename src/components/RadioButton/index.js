@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './styles.css'
 import infoImage from '../../assets/info.svg'
@@ -9,18 +9,26 @@ function RadionButton({
   valueButton,
   text,
   price,
+  priceName,
   info,
   checked,
   action,
   getPrice,
 }) {
   const dispatch = useDispatch()
+  // function actionCreator(value, price) {
+  //   return (dispatch) => {
+  //     dispatch(action(value))
+  //     dispatch(getPrice(price))
+  //   }
+  // }
   function actionCreator(value, price) {
-    return (dispatch) => {
-      dispatch(action(value))
-      dispatch(getPrice(price))
+    return () => {
+      localStorage.setItem(nameButton, value)
+      localStorage.setItem(priceName, price)
     }
   }
+
   return (
     <div className="radio-button">
       <input

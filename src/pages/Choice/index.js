@@ -48,7 +48,7 @@ function Choice() {
         />
       </Link>
       <p className="choice-text">Ou monte a sua pizza</p>
-      <Link to="/size">
+      <Link to="/sizes">
         <ChoiceButton
           text={'Montar minha pizza'}
           styles={'btn-primary'}

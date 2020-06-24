@@ -14,7 +14,10 @@ function Size() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchSizes())
+    dispatch(getSize(localStorage.getItem('size')))
+    dispatch(getSizePrice(parseInt(localStorage.getItem('sizePrice'))))
   }, [dispatch])
+
   return (
     <div className="container">
       <Title text="Pizza" span="Shop" subText="Selecione o tamanho" />
@@ -32,6 +35,7 @@ function Size() {
               valueButton={size.size}
               text={size.size}
               price={size.price}
+              priceName={'sizePrice'}
               info={size.info}
               action={getSize}
               getPrice={getSizePrice}
@@ -39,7 +43,7 @@ function Size() {
           ))}
         </div>
       )}
-      <Link to="/dough">
+      <Link to="/doughes">
         <Button text="Próximo" styles="btn-primary" />
       </Link>
       <Link to="/choice">

@@ -14,6 +14,8 @@ function Filling() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchFillings())
+    dispatch(getFilling(localStorage.getItem('filling')))
+    dispatch(getFillingPrice(parseInt(localStorage.getItem('fillingPrice'))))
   }, [dispatch])
   return (
     <div className="container">
@@ -32,6 +34,7 @@ function Filling() {
               valueButton={filling.filling}
               text={filling.filling}
               price={filling.price}
+              priceName="fillingPrice"
               info={filling.info}
               action={getFilling}
               getPrice={getFillingPrice}
@@ -42,7 +45,7 @@ function Filling() {
       <Link to="/checkout">
         <Button text={'Próximo'} styles={'btn-primary'} />
       </Link>
-      <Link to="/border">
+      <Link to="/borders">
         <Button text={'Voltar'} styles={'btn-secondary'} />
       </Link>
     </div>

@@ -14,6 +14,8 @@ function Dough() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchDoughes())
+    dispatch(getDough(localStorage.getItem('dough')))
+    dispatch(getDoughPrice(parseInt(localStorage.getItem('doughPrice'))))
   }, [dispatch])
   return (
     <div className="container">
@@ -32,6 +34,7 @@ function Dough() {
               valueButton={dough.dough}
               text={dough.dough}
               price={dough.price}
+              priceName="doughPrice"
               info={dough.info}
               action={getDough}
               getPrice={getDoughPrice}
@@ -39,10 +42,10 @@ function Dough() {
           ))}
         </div>
       )}
-      <Link to="/border">
+      <Link to="/borders">
         <Button text={'Próximo'} styles={'btn-primary'} />
       </Link>
-      <Link to="/size">
+      <Link to="/sizes">
         <Button text={'Voltar'} styles={'btn-secondary'} />
       </Link>
     </div>

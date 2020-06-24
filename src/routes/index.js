@@ -16,10 +16,10 @@ function Routes() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/choice" component={Choice} />
-        <Route path="/size" component={Size} />
-        <Route path="/dough" component={Dough} />
-        <Route path="/border" component={Border} />
-        <Route path="/filling" component={Filling} />
+        <Route path="/sizes" component={Size} />
+        <Route path="/doughes" component={Dough} />
+        <Route path="/borders" component={Border} />
+        <Route path="/fillings" component={Filling} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/success" component={Success} />
       </Switch>

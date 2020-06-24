@@ -14,6 +14,8 @@ function Border() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchBorders())
+    dispatch(getBorder(localStorage.getItem('border')))
+    dispatch(getBorderPrice(parseInt(localStorage.getItem('borderPrice'))))
   }, [dispatch])
   return (
     <div className="container">
@@ -32,6 +34,7 @@ function Border() {
               valueButton={border.border}
               text={border.border}
               price={border.price}
+              priceName="borderPrice"
               info={border.info}
               action={getBorder}
               getPrice={getBorderPrice}
@@ -39,10 +42,10 @@ function Border() {
           ))}
         </div>
       )}
-      <Link to="/filling">
+      <Link to="/fillings">
         <Button text={'Próximo'} styles={'btn-primary'} />
       </Link>
-      <Link to="/dough">
+      <Link to="/doughes">
         <Button text={'Voltar'} styles={'btn-secondary'} />
       </Link>
     </div>
