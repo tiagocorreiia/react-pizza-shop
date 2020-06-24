@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../../services/api'
 import {
   FETCH_DOUGH_REQUEST,
   FETCH_DOUGH_SUCCESS,
@@ -8,7 +8,8 @@ import {
 export const fetchDoughes = () => {
   return (dispatch) => {
     dispatch(fetchDoughesRequest)
-    axios('http://localhost:3004/doughes')
+    api
+      .get('doughes')
       .then((response) => {
         const doughes = response.data
         dispatch(fetchDoughesSuccess(doughes))

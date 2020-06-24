@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../../services/api'
 import {
   FETCH_BORDER_REQUEST,
   FETCH_BORDER_SUCCESS,
@@ -8,7 +8,8 @@ import {
 export const fetchBorders = () => {
   return (dispatch) => {
     dispatch(fetchBordersRequest)
-    axios('http://localhost:3004/borders')
+    api
+      .get('borders')
       .then((response) => {
         const borders = response.data
         dispatch(fetchBordersSuccess(borders))

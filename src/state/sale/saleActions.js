@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../../services/api'
 import {
   FETCH_SALES_REQUEST,
   FETCH_SALES_SUCCESS,
@@ -8,7 +8,8 @@ import {
 export const fetchSales = () => {
   return (dispatch) => {
     dispatch(fetchSaleRequest)
-    axios('http://localhost:3004/sales')
+    api
+      .get('sales')
       .then((response) => {
         const sales = response.data
         dispatch(fetchSaleSuccess(sales))

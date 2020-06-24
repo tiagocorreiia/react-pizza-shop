@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../../services/api'
 import {
   FETCH_FILLING_REQUEST,
   FETCH_FILLING_SUCCESS,
@@ -8,7 +8,8 @@ import {
 export const fetchFillings = () => {
   return (dispatch) => {
     dispatch(fetchFillingsRequest)
-    axios('http://localhost:3004/fillings')
+    api
+      .get('fillings')
       .then((response) => {
         const fillings = response.data
         dispatch(fetchFillingsSuccess(fillings))

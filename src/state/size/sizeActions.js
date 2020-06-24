@@ -1,4 +1,4 @@
-import axios from 'axios'
+import api from '../../services/api'
 import {
   FETCH_SIZE_REQUEST,
   FETCH_SIZE_SUCCESS,
@@ -8,7 +8,8 @@ import {
 export const fetchSizes = () => {
   return (dispatch) => {
     dispatch(fetchSizesRequest)
-    axios('http://localhost:3004/sizes')
+    api
+      .get('sizes')
       .then((response) => {
         const sizes = response.data
         dispatch(fetchSizesSuccess(sizes))
