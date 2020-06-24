@@ -6,6 +6,7 @@ import fillingReducer from './filling/fillingReducer'
 import orderReducer from './order/orderReducer'
 import saleReducer from './sale/saleReducer'
 import saleSelectedReducer from './saleSelected/saleSelectedReducer'
+import itemPriceReducer from './itemPrice/itemPriceReducer'
 
 const rootReducer = combineReducers({
   size: sizeReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   order: orderReducer,
   sale: saleReducer,
   selected: saleSelectedReducer,
+  price: itemPriceReducer,
 })
 
 export default rootReducer

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchSizes, getSize } from '../../state'
+import { fetchSizes, getSize, getSizePrice } from '../../state'
 
 import Button from '../../components/Button'
 import Title from '../../components/Title'
@@ -31,8 +31,10 @@ function Size() {
               nameButton="size"
               valueButton={size.size}
               text={size.size}
+              price={size.price}
               info={size.info}
               action={getSize}
+              getPrice={getSizePrice}
             />
           ))}
         </div>

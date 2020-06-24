@@ -4,12 +4,14 @@
       "id": 1,
       "pizza": "Pizza sabor manjericão e alho",
       "url_image": "https://cdn.pixabay.com/photo/2016/02/19/11/30/pizza-1209748_960_720.jpg",
+      "price": 25.0,
       "points": 100
     },
     {
       "id": 2,
       "pizza": "Queijo com azeitonas",
       "url_image": "https://cdn.pixabay.com/photo/2016/11/29/13/02/cheese-1869708_960_720.jpg",
+      "price": 20.0,
       "pontos": 50
     }
   ],
@@ -17,26 +19,31 @@
     {
       "id": 1,
       "size": "Pequena",
+      "price": 1.0,
       "info": "25 cm – 6 fatias"
     },
     {
       "id": 2,
       "size": "Média",
+      "price": 2.0,
       "info": "30cm – 8 fatias"
     },
     {
       "id": 3,
       "size": "Grande",
+      "price": 3.0,
       "info": "35cm – 10 fatias"
     },
     {
       "id": 4,
       "size": "Família",
+      "price": 4.0,
       "info": "40cm – 12 fatias"
     },
     {
       "id": 5,
       "size": "Gigante",
+      "price": 5.0,
       "info": "45cm – 16 fatias"
     }
   ],
@@ -44,16 +51,19 @@
     {
       "id": 1,
       "dough": "Pan",
+      "price": 2.0,
       "info": "Alta, dourada, crocante por fora e macia por dentro."
     },
     {
       "id": 2,
       "dough": "Fininha",
+      "price": 1.0,
       "info": "Nossa massa mais fina e crocante."
     },
     {
       "id": 3,
       "dough": "Artezanal",
+      "price": 3.0,
       "info": "Nossa massa tradicional, inspirada na clássica receita italiana."
     }
   ],
@@ -61,48 +71,57 @@
     {
       "id": 1,
       "border": "Cheddar",
+      "price": 4.0,
       "info": "Borda recheada com Cheddar"
     },
     {
       "id": 2,
       "border": "Requeijão",
+      "price": 3.0,
       "info": "Borda recheada com Requeijão"
     },
     {
       "id": 3,
       "border": "Cheesy Pop",
+      "price": 4.0,
       "info": "Borda recheada com Cheesy Pop"
     }
   ],
   "fillings": [
     {
       "id": 1,
+      "price": 3.0,
       "filling": "Calabresa",
       "info": "Pizza recheada com Calabresa"
     },
     {
       "id": 2,
       "filling": "Mussarela",
+      "price": 4.0,
       "info": "Pizza recheada com Mussarela"
     },
     {
       "id": 3,
       "filling": "Portuguesa",
+      "price": 5.0,
       "info": "Pizza recheada com calabresa"
     },
     {
       "id": 4,
       "filling": "Quatro Queijos",
+      "price": 4.0,
       "info": "Pizza recheada quatro queijos"
     },
     {
       "id": 5,
       "filling": "Lombo",
+      "price": 7.0,
       "info": "Pizza recheada Lombo"
     },
     {
       "id": "6",
       "filling": "Manjericão e Alho",
+      "price": 3.0,
       "info": "Pizza recheada com manjericão e alho"
     }
   ]

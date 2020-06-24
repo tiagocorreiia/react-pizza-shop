@@ -1,7 +1,7 @@
 import { SALE_SELECTED } from './saleSelectedTypes'
 
 const initialState = {
-  selected: 'false',
+  selected: 'true',
 }
 
 const saleSelectedReducer = (state = initialState, action) => {

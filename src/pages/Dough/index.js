@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchDoughes, getDough } from '../../state'
+import { fetchDoughes, getDough, getDoughPrice } from '../../state'
 
 import Button from '../../components/Button'
 import Title from '../../components/Title'
@@ -31,8 +31,10 @@ function Dough() {
               nameButton="dough"
               valueButton={dough.dough}
               text={dough.dough}
+              price={dough.price}
               info={dough.info}
               action={getDough}
+              getPrice={getDoughPrice}
             />
           ))}
         </div>

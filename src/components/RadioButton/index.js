@@ -8,11 +8,19 @@ function RadionButton({
   nameButton,
   valueButton,
   text,
+  price,
   info,
   checked,
   action,
+  getPrice,
 }) {
   const dispatch = useDispatch()
+  function actionCreator(value, price) {
+    return (dispatch) => {
+      dispatch(action(value))
+      dispatch(getPrice(price))
+    }
+  }
   return (
     <div className="radio-button">
       <input
@@ -21,11 +29,14 @@ function RadionButton({
         name={nameButton}
         value={valueButton}
         checked={checked}
-        onChange={(e) => dispatch(action(e.target.value))}
+        onChange={(e) => dispatch(actionCreator(e.target.value, price))}
       />
       <span className="checkmark"></span>
       <label htmlFor={idButton}>{text}</label>
-      <img src={infoImage} alt="" title={info} />
+      <div className="info">
+        <span>+R${price.toFixed(2)} </span>
+        <img src={infoImage} alt="" title={info} />
+      </div>
     </div>
   )
 }

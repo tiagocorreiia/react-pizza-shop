@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchBorders, getBorder } from '../../state'
+import { fetchBorders, getBorder, getBorderPrice } from '../../state'
 
 import Button from '../../components/Button'
 import Title from '../../components/Title'
@@ -31,8 +31,10 @@ function Border() {
               nameButton="border"
               valueButton={border.border}
               text={border.border}
+              price={border.price}
               info={border.info}
               action={getBorder}
+              getPrice={getBorderPrice}
             />
           ))}
         </div>

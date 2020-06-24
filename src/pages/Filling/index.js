@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchFillings, getFilling } from '../../state'
+import { fetchFillings, getFilling, getFillingPrice } from '../../state'
 
 import Button from '../../components/Button'
 import Title from '../../components/Title'
@@ -31,8 +31,10 @@ function Filling() {
               nameButton="filling"
               valueButton={filling.filling}
               text={filling.filling}
+              price={filling.price}
               info={filling.info}
               action={getFilling}
+              getPrice={getFillingPrice}
             />
           ))}
         </div>
