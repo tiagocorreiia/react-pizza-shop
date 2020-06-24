@@ -5,6 +5,7 @@
 
 .box-price p {
   font-size: 1.4rem;
+  border: none !important;
 }
 
 .box-price p span {
