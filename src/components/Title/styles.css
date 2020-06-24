@@ -1,0 +1,16 @@
+.title-container h2 {
+  font-family: 'Freckle Face', cursive;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.title-container h2 span {
+  color: #ff5959;
+}
+
+.title-container p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}

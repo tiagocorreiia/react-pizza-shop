@@ -1,0 +1,1 @@
+export const SALE_SELECTED = 'SALE_SALECTED'
