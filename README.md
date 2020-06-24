@@ -15,7 +15,7 @@ If you need to see the App running on phone you should change the baseURL on **f
 **from 'localhost:3004' to 'your local ip:3004'**
 
 ```
-json-server db.json --watch --port 3004
+node server
 ```
 
 ## Start Application
