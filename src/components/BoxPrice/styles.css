@@ -1,0 +1,13 @@
+.box-price {
+  background-color: #e9e9e9;
+  padding: 1.5rem;
+}
+
+.box-price p {
+  font-size: 1.4rem;
+}
+
+.box-price p span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
