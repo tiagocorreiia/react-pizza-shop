@@ -33,6 +33,7 @@ function Choice() {
                 <div>
                   <p>Recomendação do dia</p>
                   <h2>{sale.pizza}</h2>
+                  <span>R$ {sale.price} </span>
                 </div>
               </figcaption>
             </figure>

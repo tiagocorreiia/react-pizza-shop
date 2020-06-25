@@ -11,8 +11,21 @@
 }
 
 .recommendation-image figcaption div {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 1.5rem;
+}
+
+.recommendation-image figcaption div span {
+  position: absolute;
+  right: 1.65rem;
+  bottom: -1.65rem;
+  background-color: #ff5959;
+
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
 }
 
 .recommendation-image figcaption p {
