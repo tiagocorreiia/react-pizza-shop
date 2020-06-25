@@ -14,8 +14,6 @@ function Size() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchSizes())
-    dispatch(getSize(localStorage.getItem('size')))
-    dispatch(getSizePrice(parseInt(localStorage.getItem('sizePrice'))))
   }, [dispatch])
 
   return (

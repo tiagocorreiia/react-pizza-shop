@@ -14,8 +14,6 @@ function Dough() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchDoughes())
-    dispatch(getDough(localStorage.getItem('dough')))
-    dispatch(getDoughPrice(parseInt(localStorage.getItem('doughPrice'))))
   }, [dispatch])
   return (
     <div className="container">

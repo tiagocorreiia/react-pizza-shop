@@ -1,21 +1,6 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-
-import {
-  fetchSizes,
-  getSize,
-  getSizePrice,
-  fetchDoughes,
-  getDough,
-  getDoughPrice,
-  fetchBorders,
-  getBorder,
-  getBorderPrice,
-  fetchFillings,
-  getFilling,
-  getFillingPrice,
-} from '../../state'
 
 import Title from '../../components/Title'
 import Button from '../../components/Button'
@@ -25,33 +10,13 @@ import BoxPrice from '../../components/BoxPrice/'
 import './styles.css'
 
 function Checkout() {
-  // All Dispatch
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchSizes())
-    dispatch(getSize(localStorage.getItem('size')))
-    dispatch(getSizePrice(parseInt(localStorage.getItem('sizePrice'))))
-
-    dispatch(fetchDoughes())
-    dispatch(getDough(localStorage.getItem('dough')))
-    dispatch(getDoughPrice(parseInt(localStorage.getItem('doughPrice'))))
-
-    dispatch(fetchBorders())
-    dispatch(getBorder(localStorage.getItem('border')))
-    dispatch(getBorderPrice(parseInt(localStorage.getItem('borderPrice'))))
-
-    dispatch(fetchFillings())
-    dispatch(getFilling(localStorage.getItem('filling')))
-    dispatch(getFillingPrice(parseInt(localStorage.getItem('fillingPrice'))))
-  }, [dispatch])
-
   // Items
   const size = useSelector((state) => state.order.size)
   const dough = useSelector((state) => state.order.dough)
   const border = useSelector((state) => state.order.border)
   const filling = useSelector((state) => state.order.filling)
 
-  // Price Totall
+  // Price Total
   const sizePrice = useSelector((state) => state.price.sizePrice)
   const doughPrice = useSelector((state) => state.price.doughPrice)
   const borderPrice = useSelector((state) => state.price.borderPrice)

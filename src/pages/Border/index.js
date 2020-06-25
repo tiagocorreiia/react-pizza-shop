@@ -14,8 +14,6 @@ function Border() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchBorders())
-    dispatch(getBorder(localStorage.getItem('border')))
-    dispatch(getBorderPrice(parseInt(localStorage.getItem('borderPrice'))))
   }, [dispatch])
   return (
     <div className="container">

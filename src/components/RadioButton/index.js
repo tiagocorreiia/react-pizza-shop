@@ -9,23 +9,16 @@ function RadionButton({
   valueButton,
   text,
   price,
-  priceName,
   info,
   checked,
   action,
   getPrice,
 }) {
   const dispatch = useDispatch()
-  // function actionCreator(value, price) {
-  //   return (dispatch) => {
-  //     dispatch(action(value))
-  //     dispatch(getPrice(price))
-  //   }
-  // }
   function actionCreator(value, price) {
-    return () => {
-      localStorage.setItem(nameButton, value)
-      localStorage.setItem(priceName, price)
+    return (dispatch) => {
+      dispatch(action(value))
+      dispatch(getPrice(price))
     }
   }
 

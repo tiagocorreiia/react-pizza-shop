@@ -14,8 +14,6 @@ function Filling() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchFillings())
-    dispatch(getFilling(localStorage.getItem('filling')))
-    dispatch(getFillingPrice(parseInt(localStorage.getItem('fillingPrice'))))
   }, [dispatch])
   return (
     <div className="container">
