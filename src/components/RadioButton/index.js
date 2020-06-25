@@ -7,10 +7,10 @@ function RadionButton({
   idButton,
   nameButton,
   valueButton,
+  checked,
   text,
   price,
   info,
-  checked,
   action,
   getPrice,
 }) {
@@ -24,19 +24,23 @@ function RadionButton({
 
   return (
     <div className="radio-button">
-      <input
-        type="radio"
-        id={idButton}
-        name={nameButton}
-        value={valueButton}
-        checked={checked}
-        onChange={(e) => dispatch(actionCreator(e.target.value, price))}
-      />
-      <span className="checkmark"></span>
-      <label htmlFor={idButton}>{text}</label>
+      <div className="input-button">
+        <input
+          type="radio"
+          id={idButton}
+          name={nameButton}
+          value={valueButton}
+          checked={checked}
+          onChange={(e) => dispatch(actionCreator(e.target.value, price))}
+        />
+        <span className="checkmark"></span>
+        <label htmlFor={idButton}>{text}</label>
+      </div>
       <div className="info">
-        <span>+R${price.toFixed(2)} </span>
         <img src={infoImage} alt="" title={info} />
+      </div>
+      <div className="price">
+        <span>+R${price.toFixed(2)} </span>
       </div>
     </div>
   )
