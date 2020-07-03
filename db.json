@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Lucas Correia",
+      "name": "John Doe",
       "email": "user1@pizzashop.com",
       "password": "FA3C1CDEE866E8B57B644E55AA85AD1F001EA14471DA9D41CDD3195E5613F4B8B6FFF905E7F1AFB3954A3E182E92C52497E41DECF5718B51A09BFADF52E77F20",
       "address": [
@@ -20,22 +20,6 @@
           "order_number": 115241
         }
       ]
-    },
-    {
-      "id": 2,
-      "name": "Tiago Bac",
-      "email": "user2@pizzashop.com",
-      "password": "01C80F0A14035A8977AD7CFE0FD91E2F9C6DEF942F2447C4744E0A8B4C639BCEF281AD9E2B97EFE20ACCBF8B52AB7D7BAFA0956F34D6D9E574ED12FA1A3EC56D",
-      "address": [
-        {
-          "street": "Rua Gioto di Bandoni - Parque Nardini",
-          "number": "2",
-          "city": "Americana",
-          "state": "SP",
-          "zip_code": "13468-000"
-        }
-      ],
-      "orders": []
     }
   ],
   "sales": [
