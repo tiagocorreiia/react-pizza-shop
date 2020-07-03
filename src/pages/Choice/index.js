@@ -6,7 +6,7 @@ import { fetchSales, changeSaleSelected } from '../../state'
 
 import Button from '../../components/Button'
 import ChoiceButton from '../../components/ChoiceButton'
-import Title from '../../components/Title'
+import NavBar from '../../components/NavBar/'
 import Spinner from '../../components/Spinner'
 
 import './styles.css'
@@ -19,7 +19,7 @@ function Choice() {
   }, [dispatch])
   return (
     <div className="container">
-      <Title text="Pizza" span="Shop" />
+      <NavBar />
       {saleData.loading ? (
         <Spinner />
       ) : saleData.error ? (
@@ -41,12 +41,7 @@ function Choice() {
         </div>
       )}
       <Link to="/checkout">
-        <ChoiceButton
-          text={'Quero esta'}
-          styles={'btn-primary'}
-          selectedValue={true}
-          action={changeSaleSelected}
-        />
+        <ChoiceButton text={'Quero esta'} styles={'btn-primary'} selectedValue={true} action={changeSaleSelected} />
       </Link>
       <p className="choice-text">Ou monte a sua pizza</p>
       <Link to="/sizes">

@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.navbar .navbar-logo {
+  flex: 0 0 85%;
+}
+
+.navbar .navbar-logo img {
+  margin: 0;
+}
+
+.navbar .navbar-user {
+  flex: 0 0 15%;
+  display: flex;
+}
+
+.navbar .navbar-user a img,
+.navbar .navbar-user img {
+  max-width: 2.5rem;
+  cursor: pointer;
+}
+
+.navbar .navbar-user img.signout-effect {
+  margin-left: 0.5rem;
+  animation: signout 3s infinite;
+}
+
+.navbar .navbar-user button {
+  width: auto;
+  background-color: transparent;
+}
+
+@keyframes signout {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.8rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

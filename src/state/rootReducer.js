@@ -7,6 +7,8 @@ import orderReducer from './order/orderReducer'
 import saleReducer from './sale/saleReducer'
 import saleSelectedReducer from './saleSelected/saleSelectedReducer'
 import itemPriceReducer from './itemPrice/itemPriceReducer'
+import userReducer from './user/userReducer'
+import userLoginReducer from './userLogin/userLoginReducer'
 
 const rootReducer = combineReducers({
   size: sizeReducer,
@@ -17,6 +19,8 @@ const rootReducer = combineReducers({
   sale: saleReducer,
   selected: saleSelectedReducer,
   price: itemPriceReducer,
+  user: userReducer,
+  login: userLoginReducer,
 })
 
 export default rootReducer

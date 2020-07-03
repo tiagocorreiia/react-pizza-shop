@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import { fetchSizes, getSize, getSizePrice } from '../../state'
 
 import Button from '../../components/Button'
-import Title from '../../components/Title'
+import NavBar from '../../components/NavBar/'
+import SubTitle from '../../components/SubTitle/'
 import RadioButton from '../../components/RadioButton'
 import Spinner from '../../components/Spinner'
 
@@ -18,7 +19,8 @@ function Size() {
 
   return (
     <div className="container">
-      <Title text="Pizza" span="Shop" subText="Selecione o tamanho" />
+      <NavBar />
+      <SubTitle text="Escolha o tamanho" />
       {sizeData.loading ? (
         <Spinner />
       ) : sizeData.error ? (

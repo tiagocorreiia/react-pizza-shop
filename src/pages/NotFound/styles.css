@@ -1,0 +1,8 @@
+.page-not-found h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.page-not-found p {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}

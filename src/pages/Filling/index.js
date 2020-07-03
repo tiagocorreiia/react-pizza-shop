@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import { fetchFillings, getFilling, getFillingPrice } from '../../state'
 
 import Button from '../../components/Button'
-import Title from '../../components/Title'
+import NavBar from '../../components/NavBar'
+import SubTitle from '../../components/SubTitle'
 import RadioButton from '../../components/RadioButton'
 import Spinner from '../../components/Spinner'
 
@@ -17,7 +18,8 @@ function Filling() {
   }, [dispatch])
   return (
     <div className="container">
-      <Title text="Pizza" span="Shop" subText="Selecione o recheio" />
+      <NavBar />
+      <SubTitle text="Selecione o recheio" />
       {fillingData.loading ? (
         <Spinner />
       ) : fillingData.error ? (

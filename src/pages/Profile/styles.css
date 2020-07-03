@@ -1,0 +1,42 @@
+.profile-info h3 {
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.profile-info h3:before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 0.4rem;
+  background-color: #ff5959;
+  top: 50%;
+  margin-top: -0.2rem;
+  margin-left: -2.5rem;
+}
+
+.profile-info form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-info .form-group {
+  flex: 0 0 100%;
+}
+.profile-info .form-group:nth-child(2) {
+  flex: 0 0 85%;
+  padding-right: 1.5rem;
+}
+.profile-info .form-group:nth-child(3) {
+  flex: 0 0 15%;
+}
+.profile-info .form-group:nth-child(4) {
+  flex: 0 0 70%;
+  padding-right: 1.5rem;
+}
+.profile-info .form-group:nth-child(5) {
+  flex: 0 0 30%;
+}
