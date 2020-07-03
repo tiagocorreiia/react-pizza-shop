@@ -18,14 +18,14 @@ If you need to see the App running on phone you should change the baseURL on **f
 node server
 ```
 
-## User Login
-
-Email: user1@pizzashop.com
-
-Senha: senha123
-
 ## Start Application
 
 ```
 npm start
 ```
+
+## User Login
+
+Email: user1@pizzashop.com
+
+Senha: senha123
