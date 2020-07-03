@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { fetchSales, changeSaleSelected } from '../../state'
 
-import Button from '../../components/Button'
 import ChoiceButton from '../../components/ChoiceButton'
 import NavBar from '../../components/NavBar/'
 import Spinner from '../../components/Spinner'
@@ -51,9 +50,6 @@ function Choice() {
           selectedValue={false}
           action={changeSaleSelected}
         />
-      </Link>
-      <Link to="/">
-        <Button text={'Voltar'} styles={'btn-secondary'} />
       </Link>
     </div>
   )
