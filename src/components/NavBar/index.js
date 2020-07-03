@@ -24,7 +24,7 @@ function NavBar({ hiddenNavBar }) {
       ) : (
         <div className="navbar-user">
           <Link to="/profile">
-            <img src={UserProfile} alt="User Profile Icon" />
+            <img src={UserProfile} alt="User Profile Icon" title="Perfil" />
           </Link>
           <img className="signout-effect" src={SignOut} alt="Sign Out Icon" onClick={userLogout} title="Sair" />
         </div>
