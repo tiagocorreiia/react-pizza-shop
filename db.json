@@ -1,25 +1,18 @@
 {
   "users": [
     {
-      "id": 1,
       "name": "John Doe",
       "email": "user1@pizzashop.com",
-      "password": "FA3C1CDEE866E8B57B644E55AA85AD1F001EA14471DA9D41CDD3195E5613F4B8B6FFF905E7F1AFB3954A3E182E92C52497E41DECF5718B51A09BFADF52E77F20",
-      "address": [
-        {
-          "street": "Rua Gioto di Bandoni - Parque Nardini",
-          "number": "1",
-          "city": "Americana",
-          "state": "SP",
-          "zip_code": "13468-000"
-        }
-      ],
-      "orders": [
-        {
-          "id": 1,
-          "order_number": 115241
-        }
-      ]
+      "password": "fa3c1cdee866e8b57b644e55aa85ad1f001ea14471da9d41cdd3195e5613f4b8b6fff905e7f1afb3954a3e182e92c52497e41decf5718b51a09bfadf52e77f20",
+      "address": {
+        "street": "Neverland",
+        "number": "555",
+        "city": "Greenlandy",
+        "state": "NA",
+        "zip_code": "14000-000"
+      },
+      "orders": [],
+      "id": 1
     }
   ],
   "sales": [

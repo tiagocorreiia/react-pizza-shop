@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import PrivateRoute from '../components/PrivateRoute'
 
 import Home from '../pages/Home'
+import Register from '../pages/Register'
+import RegisterSuccess from '../pages/RegisterSuccess'
 import Profile from '../pages/Profile'
 import Choice from '../pages/Choice/'
 import Size from '../pages/Size'
@@ -18,6 +20,8 @@ function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/register" component={Register} />
+        <Route path="/register-success" component={RegisterSuccess} />
         <PrivateRoute path="/choice" component={Choice} />
         <PrivateRoute path="/profile" component={Profile} />
         <PrivateRoute path="/choice" component={Choice} />

@@ -20,29 +20,56 @@ function Profile() {
           <Button text="Fazer pedido" styles="btn-primary" />
         </Link>
         <h3>Pedidos recentes</h3>
-        <div className="recents-orders">{userData.orders ? 'Vazio' : 'Não'}</div>
+        <div className="recents-orders">
+          {userData.orders ? 'Vazio' : 'Não'}
+        </div>
         <h3>Seus dados</h3>
         <div className="address">
           <form>
             <div className="form-group">
               <label htmlFor="cep">CEP</label>
-              <input type="text" name="cep" placeholder={userData.address[0].zip_code} readOnly />
+              <input
+                type="text"
+                name="cep"
+                placeholder={userData.address.zip_code}
+                readOnly
+              />
             </div>
             <div className="form-group">
               <label htmlFor="street">Logradouro</label>
-              <input type="text" name="street" placeholder={userData.address[0].street} readOnly />
+              <input
+                type="text"
+                name="street"
+                placeholder={userData.address.street}
+                readOnly
+              />
             </div>
             <div className="form-group">
               <label htmlFor="number">Número</label>
-              <input type="text" name="number" placeholder={userData.address[0].number} readOnly />
+              <input
+                type="text"
+                name="number"
+                placeholder={userData.address.number}
+                readOnly
+              />
             </div>
             <div className="form-group">
               <label htmlFor="city">Cidade</label>
-              <input type="text" name="city" placeholder={userData.address[0].city} readOnly />
+              <input
+                type="text"
+                name="city"
+                placeholder={userData.address.city}
+                readOnly
+              />
             </div>
             <div className="form-group">
               <label htmlFor="state">Estado</label>
-              <input type="text" name="state" placeholder={userData.address[0].state} readOnly />
+              <input
+                type="text"
+                name="state"
+                placeholder={userData.address.state}
+                readOnly
+              />
             </div>
           </form>
         </div>
