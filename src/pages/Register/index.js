@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import Crypto from 'crypto-js'
 import api from '../../services/api'
 
 import NavBar from '../../components/NavBar'
 import SubTitle from '../../components/SubTitle'
+import Button from '../../components/Button'
 
 import './styles.css'
 
@@ -145,6 +146,9 @@ function Register() {
             <button type="submit">Cadastrar</button>
           </div>
         </form>
+        <Link to="/">
+          <Button text="Voltar" styles="btn-secondary" />
+        </Link>
       </div>
     </div>
   )

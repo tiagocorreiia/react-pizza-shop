@@ -1,0 +1,5 @@
+.order-detail p {
+  text-transform: uppercase;
+  transform: translateY(-0.2rem);
+  font-weight: 100;
+}

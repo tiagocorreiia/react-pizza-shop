@@ -1,6 +1,8 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+
+import { fetchAllOrder } from '../../state/'
 
 import NavBar from '../../components/NavBar'
 import SubTitle from '../../components/SubTitle'
@@ -9,7 +11,19 @@ import Button from '../../components/Button'
 import './styles.css'
 
 function Profile() {
+  const userOrders = []
   const userData = useSelector((state) => state.login.userInfo[0])
+  const orderData = useSelector((state) => state.allOrder.orders)
+  const userEmail = JSON.parse(localStorage.getItem('user'))
+  orderData.map((email) => userOrders.push(email))
+  const filteredUserEmail = userOrders.filter(
+    (x) => x.email === userEmail[0].email
+  )
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchAllOrder())
+  }, [dispatch])
 
   return (
     <div className="container">
@@ -21,7 +35,22 @@ function Profile() {
         </Link>
         <h3>Pedidos recentes</h3>
         <div className="recents-orders">
-          {userData.orders ? 'Vazio' : 'Não'}
+          {filteredUserEmail.slice(0, 3).map((orderInfo) => (
+            <div className="order-info" key={orderInfo.id}>
+              <Link
+                to={{
+                  pathname: '/order',
+                  state: {
+                    id: orderInfo.id,
+                  },
+                }}
+              >
+                <h2>
+                  <span>Número do pedido:</span> {orderInfo.order_number}
+                </h2>
+              </Link>
+            </div>
+          ))}
         </div>
         <h3>Seus dados</h3>
         <div className="address">

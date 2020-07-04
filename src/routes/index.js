@@ -13,6 +13,7 @@ import Border from '../pages/Border'
 import Filling from '../pages/Filling'
 import Checkout from '../pages/Checkout'
 import Success from '../pages/Success'
+import Order from '../pages/Order'
 import NotFound from '../pages/NotFound/'
 
 function Routes() {
@@ -31,6 +32,7 @@ function Routes() {
         <PrivateRoute path="/fillings" component={Filling} />
         <PrivateRoute path="/checkout" component={Checkout} />
         <PrivateRoute path="/success" component={Success} />
+        <PrivateRoute path="/order" component={Order} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+
+import api from '../../services/api'
 
 import NavBar from '../../components/NavBar'
 import SubTitle from '../../components/SubTitle'
@@ -11,6 +13,8 @@ import BoxPrice from '../../components/BoxPrice/'
 import './styles.css'
 
 function Checkout() {
+  const history = useHistory()
+
   // Items
   const size = useSelector((state) => state.order.size)
   const dough = useSelector((state) => state.order.dough)
@@ -22,10 +26,39 @@ function Checkout() {
   const doughPrice = useSelector((state) => state.price.doughPrice)
   const borderPrice = useSelector((state) => state.price.borderPrice)
   const fillingPrice = useSelector((state) => state.price.fillingPrice)
-  const orderTotal = parseInt(sizePrice + doughPrice + borderPrice + fillingPrice)
+  const orderTotal = parseInt(
+    sizePrice + doughPrice + borderPrice + fillingPrice
+  )
 
   const saleSelected = useSelector((state) => state.selected.selected)
   const saleData = useSelector((state) => state.sale)
+
+  async function handleOrder(e) {
+    e.preventDefault()
+    const userInfo = JSON.parse(localStorage.getItem('user'))
+    const name = userInfo[0].name
+    const email = userInfo[0].email
+    const order_number = Math.floor(Math.random() * 1000000000)
+    const total = orderTotal
+
+    const data = {
+      order_number,
+      name,
+      email,
+      size,
+      dough,
+      border,
+      filling,
+      total,
+    }
+
+    try {
+      await api.post('orders', data)
+      history.push('/success')
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <div className="container">
@@ -39,7 +72,8 @@ function Checkout() {
               <span>Sua escolha:</span> {sale.pizza}.
             </p>
             <p>
-              Você ganhou <span>{sale.points}</span> pontos por ter escolhido nossa recomendação!
+              Você ganhou <span>{sale.points}</span> pontos por ter escolhido
+              nossa recomendação!
             </p>
             <div className="box-price">
               <p>
@@ -50,13 +84,18 @@ function Checkout() {
         ))
       ) : (
         <div>
-          <OrderBoxItem sizeItem={size} doughItem={dough} borderItem={border} fillingItem={filling} />
+          <OrderBoxItem
+            sizeItem={size}
+            doughItem={dough}
+            borderItem={border}
+            fillingItem={filling}
+          />
           <BoxPrice price={orderTotal} />
         </div>
       )}
-      <Link to="/success">
-        <Button text={'Finalizar pedido'} styles={'btn-primary'} />
-      </Link>
+      <button className="btn-primary" onClick={handleOrder}>
+        Finalizar pedido
+      </button>
       {saleSelected === 'true' ? (
         ''
       ) : (

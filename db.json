@@ -11,8 +11,78 @@
         "state": "NA",
         "zip_code": "14000-000"
       },
-      "orders": [],
       "id": 1
+    },
+    {
+      "name": "Bob Burn",
+      "email": "user2@pizzashop.com",
+      "password": "fa3c1cdee866e8b57b644e55aa85ad1f001ea14471da9d41cdd3195e5613f4b8b6fff905e7f1afb3954a3e182e92c52497e41decf5718b51a09bfadf52e77f20",
+      "address": {
+        "street": "Rua Island",
+        "number": "44",
+        "city": "Ice Born",
+        "state": "CA",
+        "zip_code": "13000-000"
+      },
+      "orders": [],
+      "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "order_number": 672736582,
+      "name": "John Doe",
+      "email": "user1@pizzashop.com",
+      "size": "Família",
+      "dough": "Fininha",
+      "border": "Cheesy Pop",
+      "filling": "Portuguesa",
+      "total": 14,
+      "id": 1
+    },
+    {
+      "order_number": 926145506,
+      "name": "John Doe",
+      "email": "user1@pizzashop.com",
+      "size": "Grande",
+      "dough": "Fininha",
+      "border": "Cheddar",
+      "filling": "Quatro Queijos",
+      "total": 12,
+      "id": 2
+    },
+    {
+      "order_number": 265048542,
+      "name": "John Doe",
+      "email": "user1@pizzashop.com",
+      "size": "Família",
+      "dough": "Fininha",
+      "border": "Cheddar",
+      "filling": "Quatro Queijos",
+      "total": 13,
+      "id": 3
+    },
+    {
+      "order_number": 641657235,
+      "name": "Bob Burn",
+      "email": "user2@pizzashop.com",
+      "size": "Grande",
+      "dough": "Pan",
+      "border": "Cheesy Pop",
+      "filling": "Lombo",
+      "total": 16,
+      "id": 4
+    },
+    {
+      "order_number": 297221855,
+      "name": "Lucas Correia",
+      "email": "user1@pizzashop.com",
+      "size": "Média",
+      "dough": "Artezanal",
+      "border": "Cheddar",
+      "filling": "Quatro Queijos",
+      "total": 13,
+      "id": 5
     }
   ],
   "sales": [
